@@ -17,7 +17,7 @@ An interface to make money off your available friends on facebook
 
 ## Sketch of Final Product
 
-![Mock-up] (assets/images/mock-up.png)
+![Mock-up] (./assets/images/mock-up.png)
 
 ## APIs to be Used
 * GoogleMaps
