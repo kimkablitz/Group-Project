@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,11 +18,13 @@
   <!-- favicon -->
   <link rel="icon" href="assets/images/friends_icon.jpg">
   <!-- firebase -->
-  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
-  <!-- moment.js -->
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <!-- moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 </head>
+
 <body>
+
   <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -38,14 +41,14 @@
                 <div class="row">
                   <div class="col-sm-5">
                     <label class="sr-only" for="inlineFormInputName2">email</label>
-                    <input type="text" class="form-control mt-xs-2" id="inlineFormInputName2" placeholder="email" />
+                    <input type="" id="txtEmail" class="form-control mt-xs-2" id="inlineFormInputName2" placeholder="email" />
                   </div>
                   <div class="col-sm-4">
                     <label class="sr-only" for="inlineFormInputGroupUsername2">password</label>
-                    <input type="text" class="form-control mt-xs-2" id="inlineFormInputGroupUsername2" placeholder="password" />
+                    <input type="password" class="form-control mt-xs-2" id="inlineFormInputGroupUsername2" placeholder="password" />
                   </div>
                   <div class="col-sm-3">
-                    <button type="submit" class="btn btn-primary btn-block mt-xs-2">Log In</button>
+                    <button type=submit id ="btnLogIn" class="btn btn-primary btn-block mt-xs-2">Log In</button>
                   </div>
                 </div>
               </form>
@@ -83,6 +86,7 @@
       </div>
     </div>
   </header>
+
   <main class="container">
     <div class="row mt-5 mx-0">
       <div class="col">
@@ -100,54 +104,129 @@
         <form>
           <div class="form-group">
             <label for="formGroupExampleInput">First Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput">
+            <input type="text" class="form-control" id="firstName">
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput2">Last Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2">
+            <input type="text" class="form-control" id="lastName">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">New Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="password" class="form-control" id="password" placeholder="Password">
           </div>
           <p>Birthday</p>
           <div class="form-row">
             <div class="form-group col-sm-4">
-              <label class="sr-only" for="inputState">Month</label>
-              <select id="inputState" class="form-control">
+              <label class="sr-only" for="inputMonth">Month</label>
+              <!-- <input id="month"type="date" class="form-control"> -->
+              <select id="month" class="form-control">
                 <option selected>Month</option>
-                <option>...</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
               </select>
             </div>
             <div class="form-group  col-sm-4">
-                <label class="sr-only" for="inputState">day</label>
-                <select id="inputState" class="form-control">
-                  <option selected>Day</option>
-                  <option>...</option>
-                </select>
-              </div>
-              <div class="form-group  col-sm-4">
-                  <label class="sr-only" for="inputState">year</label>
-                  <select id="inputState" class="form-control">
-                    <option selected>Year</option>
-                    <option>...</option>
-                  </select>
-                </div>
+              <label class="sr-only" for="inputDay">day</label>
+              <!-- <input id="date" type = "date" class="form-control"> -->
+              <select id="day" class="form-control">
+                <option selected>Day</option>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+                <option value='13'>13</option>
+                <option value='14'>14</option>
+                <option value='15'>15</option>
+                <option value='16'>16</option>
+                <option value='17'>17</option>
+                <option value='18'>18</option>
+                <option value='19'>19</option>
+                <option value='20'>20</option>
+                <option value='21'>21</option>
+                <option value='22'>22</option>
+                <option value='23'>23</option>
+                <option value='24'>24</option>
+                <option value='25'>25</option>
+                <option value='26'>26</option>
+                <option value='27'>27</option>
+                <option value='28'>28</option>
+                <option value='29'>29</option>
+                <option value='30'>30</option>
+                <option value='31'>31</option>
+              </select>
+            </div>
+            <div class="form-group  col-sm-4">
+              <label class="sr-only" for="inputYear">year</label>
+              <!-- <input id="year"type = "date" class="form-control"> -->
+              <select id="year" class="form-control">
+                <option value='1962'>1962</option>
+                <option value='1963'>1963</option>
+                <option value='1964'>1964</option>
+                <option value='1965'>1965</option>
+                <option value='1966'>1966</option>
+                <option value='1967'>1967</option>
+                <option value='1968'>1968</option>
+                <option value='1969'>1969</option>
+                <option value='1970'>1970</option>
+                <option value='1971'>1971</option>
+                <option value='1972'>1972</option>
+                <option value='1973'>1973</option>
+                <option value='1974'>1974</option>
+                <option value='1975'>1975</option>
+                <option value='1976'>1976</option>
+                <option value='1977'>1977</option>
+                <option value='1978'>1978</option>
+                <option value='1979'>1979</option>
+                <option value='1980'>1980</option>
+                <option value='1981'>1981</option>
+                <option value='1982'>1982</option>
+                <option value='1983'>1983</option>
+                <option value='1984'>1984</option>
+                <option value='1985'>1985</option>
+                <option value='1986'>1986</option>
+                <option value='1987'>1987</option>
+                <option value='1988'>1988</option>
+                <option value='1989'>1989</option>
+                <option value='1990'>1990</option>
+                <option value='1991'>1991</option>
+                <option value='1992'>1992</option>
+                <option value='1993'>1993</option>
+              </select>
+            </div>
           </div>
           <div class="form-group form-check ">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">Female</label>
+            <input class="gender" type="radio" name="sex" id="inlineRadio1" value="female">
+            <label class="form-check-label" for="female">Female</label>
           </div>
           <div class="form-group form-check">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">Male</label>
+            <input class="gender" type="radio" name="sex" id="inlineRadio2" value="male">
+            <label class="form-check-label" for="male">Male</label>
           </div>
-          <button type="submit" class="btn btn-primary">Sign Up</button>
+          <button type="submit" class="btn btn-primary">Register</button>
+          
         </form>
       </div>
     </div>
@@ -165,7 +244,8 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-    
-  <!-- <script src="assets/javascript/app.js"></script> -->
+
+  <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
