@@ -22,6 +22,7 @@
   <!-- moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 </head>
+
 <body class="bg-danger">
   <script>
     // This is called with the results from from FB.getLoginStatus().
@@ -41,25 +42,25 @@
           'into this app.';
       }
     }
-  
+
     // This function is called when someone finishes with the Login
     // Button.  See the onlogin handler attached to it in the sample
     // code below.
     function checkLoginState() {
-      FB.getLoginStatus(function(response) {
+      FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
       });
     }
-  
-    window.fbAsyncInit = function() {
+
+    window.fbAsyncInit = function () {
       FB.init({
-        appId      : '{1114146332072478}',
-        cookie     : true,  // enable cookies to allow the server to access 
-                            // the session
-        xfbml      : true,  // parse social plugins on this page
-        version    : 'v2.8' // use graph api version 2.8
+        appId: '{1114146332072478}',
+        cookie: true,  // enable cookies to allow the server to access 
+        // the session
+        xfbml: true,  // parse social plugins on this page
+        version: 'v2.8' // use graph api version 2.8
       });
-  
+
       // Now that we've initialized the JavaScript SDK, we call 
       // FB.getLoginStatus().  This function gets the state of the
       // person visiting this page and can return one of three states to
@@ -71,43 +72,43 @@
       //    your app or not.
       //
       // These three cases are handled in the callback function.
-  
-      FB.getLoginStatus(function(response) {
+
+      FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
       });
-  
+
     };
-  
+
     // Load the SDK asynchronously
-    (function(d, s, id) {
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-  
+
     // Here we run a very simple test of the Graph API after login is
     // successful.  See statusChangeCallback() for when this call is made.
     function testAPI() {
       console.log('Welcome!  Fetching your information.... ');
-      FB.api('/me', function(response) {
+      FB.api('/me', function (response) {
         console.log('Successful login for: ' + response.name);
         document.getElementById('status').innerHTML =
           'Thanks for logging in, ' + response.name + '!';
       });
     }
   </script>
-  
+
   <!--
     Below we include the Login Button social plugin. This button uses
     the JavaScript SDK to present a graphical Login button that triggers
     the FB.login() function when clicked.
   -->
-  
+
   <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>
-  
+
   <div id="status">
   </div>
   <header>
@@ -179,11 +180,12 @@
       <p class="text-white">To get started:</p>
       <div class="row align-items-center">
         <div class="col-sm-8">
-          
+
           <ul class="list-group text-dark shadow-lg">
             <li class="list-group-item d-flex justify-content-start align-items-center bg-white">
               <span class="badge badge-dark badge-pill mr-2">1</span>
-              <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+              <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with"
+                data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center bg-white">
               <span class="badge badge-dark badge-pill mr-2">2</span>
@@ -195,7 +197,8 @@
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center bg-white">
               <span class="badge badge-dark badge-pill mr-2">4</span>
-              We will look at your contacts, let you know their location in relation you, set up dates based on their calendar, and chat with them
+              We will look at your contacts, let you know their location in relation you, set up dates based on their
+              calendar, and chat with them
             </li>
             <li class="list-group-item d-flex justify-content-start align-items-center bg-white">
               <span class="badge badge-dark badge-pill mr-2">5</span>
@@ -204,7 +207,62 @@
           </ul>
         </div>
         <div class="col-sm-4">
-          <img src="assets/images/map_stand_in.png" class="img-fluid shadow-lg rounded" />
+          <!-- preview of our pages -->
+          <!-- <img src="assets/images/map_stand_in.png" class="img-fluid shadow-lg rounded" /> -->
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="screenshot1.png" alt="Chania">
+                <div class="carousel-caption">
+                  <h3>Los Angeles</h3>
+                  <p>LA is always so much fun!</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="screenshot2.png" alt="Chicago">
+                <div class="carousel-caption">
+                  <h3>Chicago</h3>
+                  <p>Thank you, Chicago!</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="screenshot3.png" alt="New York">
+                <div class="carousel-caption">
+                  <h3>New York</h3>
+                  <p>We love the Big Apple!</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="screenshot4.png" alt="Chicago">
+                <div class="carousel-caption">
+                  <h3>Chicago</h3>
+                  <p>Thank you, Chicago!</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
